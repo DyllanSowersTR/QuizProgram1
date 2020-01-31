@@ -7,40 +7,40 @@ namespace QuizProgram1MVC.Models
 {
     public class TrueFalseQuestion : IQuestion
     {
-        public string question { get; set; }
-        private List<object> correctAnswers = new List<object>();
+        public string Question { get; set; }
+        private readonly List<object> correctAnswers = new List<object>();
 
         public TrueFalseQuestion()
         {
             //
         }
 
-        public List<object> getAnswers()
+        public List<object> GetAnswers()
         {
-            return [true, false];
+            return new List<object> { true, false };
         }
 
-        public List<object> getCorrectAnswers()
+        public List<object> GetCorrectAnswers()
         {
             return correctAnswers;
         }
 
-        public void addAnswer(object answer)
+        public void AddAnswer(object answer)
         {
             //
         }
 
-        public void removeAnswer(object answer)
+        public void RemoveAnswer(object answer)
         {
             //
         }
 
-        public void addCorrectAnswer(object answer)
+        public void AddCorrectAnswer(object answer)
         {
             correctAnswers[0] = answer;
         }
 
-        public void removeCorrectAnswer(object answer)
+        public void RemoveCorrectAnswer(object answer)
         {
             correctAnswers[0] = default;
         }

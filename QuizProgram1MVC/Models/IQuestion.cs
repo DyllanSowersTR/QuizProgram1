@@ -8,14 +8,14 @@ namespace QuizProgram1MVC.Models
 {
     public interface IQuestion
     {
-        string question { get; set; }
+        string Question { get; set; }
 
-        List<object> getAnswers();
-        void addAnswer(object answer);
-        void removeAnswer(object answer);
+        List<object> GetAnswers();
+        void AddAnswer(object answer);
+        void RemoveAnswer(object answer);
 
-        List<object> getCorrectAnswers();
-        void addCorrectAnswer(object answer);
-        void removeCorrectAnswer(object answer);
+        List<object> GetCorrectAnswers();
+        void AddCorrectAnswer(object answer);
+        void RemoveCorrectAnswer(object answer);
     }
 }

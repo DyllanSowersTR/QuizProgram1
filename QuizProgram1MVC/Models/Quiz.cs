@@ -11,16 +11,17 @@ namespace QuizProgram1MVC.Models
 
         public Quiz()
         {
-            IQuestion question1 = new TrueFalseQuestion();
-            question1.question = "Is blue a color?";
-            question1.addCorrectAnswer(true);
+            //
+        }
 
-            IQuestion question2 = new MultipleChoiceQuestion();
-            question2.question = "How many states are there in the United States of America?";
-            question2.addAnswer(25);
-            question2.addAnswer(75);
-            question2.addAnswer(50);
-            question2.addCorrectAnswer(50);
+        public void AddQuestion(IQuestion question)
+        {
+            questions.Add(question);
+        }
+
+        public void RemoveQuestion(IQuestion question)
+        {
+            questions.Remove(question);
         }
     }
 }
