@@ -99,7 +99,6 @@
     <Compile Include="Models\IQuestion.cs" />
     <Compile Include="Models\MultipleChoiceQuestion.cs" />
     <Compile Include="Models\Quiz.cs" />
-    <Compile Include="Models\QuizQuestion.cs" />
     <Compile Include="Models\TrueFalseQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
