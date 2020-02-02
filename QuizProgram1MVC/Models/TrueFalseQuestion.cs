@@ -37,12 +37,13 @@ namespace QuizProgram1MVC.Models
 
         public void AddCorrectAnswer(object answer)
         {
-            correctAnswers[0] = answer;
+            correctAnswers.Clear();
+            correctAnswers.Add(answer);
         }
 
         public void RemoveCorrectAnswer(object answer)
         {
-            correctAnswers[0] = default;
+            correctAnswers.Clear();
         }
     }
 }

@@ -12,20 +12,22 @@ namespace QuizProgram1MVC.Controllers
         // GET: Quiz
         public ActionResult Index()
         {
-            Quiz quiz = new Quiz();
+            Quiz quiz = new Quiz(new QuizFormatForWeb());
 
-            IQuestion question1 = new TrueFalseQuestion();
+            IQuestion question1 = new QuizQuestion(new TrueFalseQuestion());
             question1.Question = "Is blue a color?";
             question1.AddCorrectAnswer(true);
             quiz.AddQuestion(question1);
 
-            IQuestion question2 = new MultipleChoiceQuestion();
+            IQuestion question2 = new QuizQuestion(new MultipleChoiceQuestion());
             question2.Question = "How many states are there in the United States of America?";
             question2.AddAnswer(25);
             question2.AddAnswer(75);
             question2.AddAnswer(50);
             question2.AddCorrectAnswer(50);
             quiz.AddQuestion(question2);
+
+            ViewBag.Quiz = quiz;
 
             return View();
         }
